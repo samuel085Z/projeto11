@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Acesso - Indústrias Wayne</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Indústrias Wayne - Controle de Acesso</h1>
+    </header>
+
+    <main class="container">
+        <section id="login-section">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="username">Usuário:</label>
+                <input type="text" id="sam" required><br><br>
+
+                <label for="password">Senha:</label>
+                <input type="password" id="123" required><br><br>
+
+                <button type="submit">Entrar</button>
+            </form>
+        </section>
+
+        <section id="dashboard-section" class="hidden">
+            <h2>Dashboard</h2>
+            <div id="user-info">
+                <h3>Bem-vindo, <span id="user-name"></span></h3>
+                <p>Tipo de Usuário: <span id="user-type"></span></p>
+            </div>
+
+            <div id="recursos-section">
+                <h3>Gerenciamento de Recursos</h3>
+                <button id="add-recurso">Adicionar Recurso</button>
+                <ul id="lista-recursos"></ul>
+            </div>
+
+            <div id="estatisticas-section">
+                <h3>Estatísticas</h3>
+                <div id="estatisticas-content"></div>
+            </div>
+        </section>
+
+        <section id="add-recurso-section" class="hidden">
+            <h2>Adicionar Recurso</h2>
+            <form id="add-recurso-form">
+                <label for="tipo">Tipo:</label>
+                <select id="tipo">
+                    <option value="equipamento">Equipamento</option>
+                    <option value="veiculo">Veículo</option>
+                    <option value="dispositivo">Dispositivo</option>
+                </select><br><br>
+
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" required><br><br>
+
+                <label for="descricao">Descrição:</label>
+                <textarea id="descricao"></textarea><br><br>
+
+                <label for="localizacao">Localização:</label>
+                <input type="text" id="localizacao" required><br><br>
+
+                <button type="submit">Adicionar</button>
+                <button type="button" id="cancel-add-recurso">Cancelar</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
